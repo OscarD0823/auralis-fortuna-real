@@ -15,7 +15,7 @@ export function AuthorCard() {
   };
   return <div className="project-credit" aria-label="Autor y página oficial">
     <a className="project-author-card" href={PROJECT_REPOSITORY} target="_blank" rel="noopener noreferrer"
-      aria-label={`Creado por ${PROJECT_AUTHOR}. Abrir repositorio de Fortuna Real en el navegador`}
+      aria-label={`Creado por ${PROJECT_AUTHOR}. Abrir repositorio de Auralis Fortuna Real en el navegador`}
       onClick={event => follow(event, PROJECT_REPOSITORY)}>
       <CodeXml size={17} aria-hidden="true" />
       <span><small>Creado por</small><strong>{PROJECT_AUTHOR}</strong></span>

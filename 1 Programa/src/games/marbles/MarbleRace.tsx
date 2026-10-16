@@ -676,7 +676,7 @@ const drawRace = (
     } catch (error) {
       failedWebglCanvases.add(webglCanvas);
       disposeMarbleRace3D(webglCanvas);
-      console.warn("Fortuna Real no pudo iniciar la escena 3D; se usará el render compatible.", error);
+      console.warn("Auralis Fortuna Real no pudo iniciar la escena 3D; se usará el render compatible.", error);
     }
   }
   const bounds = fallbackCanvas.getBoundingClientRect();

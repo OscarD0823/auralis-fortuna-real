@@ -318,13 +318,25 @@ salga de él.
 <!-- VERSION-HISTORY:START -->
 ## Historial de cambios
 
-Versión actual del código: **1.0.13**. También disponible desde **Novedades** dentro del programa, sin conexión.
+Versión actual del código: **1.1.0**. También disponible desde **Novedades** dentro del programa, sin conexión.
 
 Los cambios se resumen por función; los enlaces llevan al registro original. Las fechas de Releases usan el día de publicación en Colombia. Las versiones sin un Release conservado lo indican expresamente.
 
+### 1.0.13 → 1.1.0 — Auralis y recuperación de borradores
+
+Fecha: 2026-10-16. Versión actual del código.
+
+Versión BETA. Conserva participantes, resultados, compromisos de las rondas y almacenamiento anterior.
+
+#### Identidad y continuidad
+
+- Nueva identidad Auralis Fortuna Real con iconos para la web y Windows.
+- Los nombres pendientes de añadir se recuperan al volver a abrir el programa.
+- Se conservan los identificadores de la aplicación y los formatos de verificación de resultados.
+
 ### 1.0.12 → 1.0.13 — Web instalable, autor en la cabecera y retirada de Pinball
 
-Fecha: 2026-10-07. Versión actual del código.
+Fecha: 2026-10-07.
 
 Actualización para Windows y la web. Conserva la voz Daniela High en PC y los resultados locales. Las salas por Internet y Microsoft Store son propuestas documentadas, aún no disponibles.
 

@@ -118,7 +118,7 @@ export function UpdateDialog({
           <button type="button" className="text-button" onClick={onContinue}>Continuar sin actualizar</button>
           <button type="button" className="start-button" onClick={onRetry}><RefreshCw size={17} /> Reintentar</button>
         </div>}
-        {status === "complete" && <button type="button" className="start-button update-continue" onClick={onContinue}>Continuar en Fortuna Real</button>}
+        {status === "complete" && <button type="button" className="start-button update-continue" onClick={onContinue}>Continuar en Auralis Fortuna Real</button>}
         {preview && onPreviewStatus && <label className="update-preview-controls">Estado de la demostración
           <select value={status} onChange={event => onPreviewStatus(event.target.value as UpdateStatus)}>
             {Object.entries(updateHeadings).map(([value, text]) => <option key={value} value={value}>{text.title}</option>)}
@@ -197,11 +197,11 @@ export function AppUpdater({ blocked = false, onStartupCheckComplete }: {
       updateRef.current = update;
       setCurrentVersion(update.currentVersion);
       setVersion(update.version);
-      setNotes(update.body ?? "Incluye mejoras y correcciones para Fortuna Real.");
+      setNotes(update.body ?? "Incluye mejoras y correcciones para Auralis Fortuna Real.");
       changeStatus("ready");
     } catch {
       // A failed background check is not proof that the PC has no Internet.
-      console.info("[Fortuna Real] Comprobación automática aplazada.");
+      console.info("[Auralis Fortuna Real] Comprobación automática aplazada.");
       if (mountedRef.current) {
         if (manualRetry) {
           setFailurePhase("checking"); setErrorMessage("No se pudo consultar la versión publicada en GitHub. Puedes reintentar o continuar usando el programa.");

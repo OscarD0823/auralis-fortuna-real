@@ -1,3 +1,4 @@
+import auralisBrand from './assets/auralis-brand.png';
 import {
   useCallback,
   useEffect,
@@ -145,7 +146,7 @@ function App() {
   const [showVersions, setShowVersions] = useState(false);
   useEffect(() => {
     document.documentElement.dataset.appearance = neutralMode ? "play" : "original";
-    document.title = neutralMode ? "Zona de Juegos" : "Fortuna Real";
+    document.title = neutralMode ? "Zona de Juegos" : "Auralis Fortuna Real";
     localStorage.setItem("fortuna-real-appearance", neutralMode ? "play" : "original");
   }, [neutralMode]);
   const [showSplash, setShowSplash] = useState(true);
@@ -789,13 +790,12 @@ function Topbar({
   return (
     <header className="topbar">
       <div className="brand-and-credit">
-      <div className="brand-lockup" aria-label={neutralMode ? "Zona de Juegos" : "Fortuna Real"}>
+      <div className="brand-lockup" aria-label={neutralMode ? "Zona de Juegos" : "Auralis Fortuna Real"}>
         <div className="brand-mark" aria-hidden="true">
-          <span className="brand-mark__ring" />
-          <Crown size={23} strokeWidth={1.7} />
+          <img src={auralisBrand} alt="" style={{width:48,height:48}} />
         </div>
         <div>
-          <div className="brand-name">{neutralMode ? <>ZONA DE <span>JUEGOS</span></> : <>FORTUNA <span>REAL</span></>}</div>
+          <div className="brand-name">{neutralMode ? <>ZONA DE <span>JUEGOS</span></> : <>AURALIS <span>Fortuna Real</span></>}</div>
           <div className="brand-tagline">{neutralMode ? "Juega, comparte y celebra" : "Sorteos con emoción real"}</div>
         </div>
       </div>

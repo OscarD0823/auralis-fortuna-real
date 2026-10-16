@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Crown } from "lucide-react";
+import auralisLogo from '../../assets/auralis-brand.png';
 import { useNeutralAppearance } from "../appearance";
 
 export function SplashScreen({ onDone }: { onDone: () => void }) {
@@ -21,7 +21,7 @@ export function SplashScreen({ onDone }: { onDone: () => void }) {
   };
 
   return (
-    <div className={`splash ${leaving ? "splash--leaving" : ""}`} role="dialog" aria-label={neutral ? "Iniciando Zona de Juegos" : "Iniciando Fortuna Real"}>
+    <div className={`splash ${leaving ? "splash--leaving" : ""}`} role="dialog" aria-label={neutral ? "Iniciando Zona de Juegos" : "Iniciando Auralis Fortuna Real"}>
       <div className="splash-stars" aria-hidden="true">
         {Array.from({ length: 18 }, (_, index) => <i key={index} />)}
       </div>
@@ -33,11 +33,11 @@ export function SplashScreen({ onDone }: { onDone: () => void }) {
             {Array.from({ length: 12 }, (_, index) => (
               <span key={index} style={{ transform: `rotate(${index * 30}deg)` }} />
             ))}
-            <div><Crown size={42} strokeWidth={1.25} /></div>
+            <div><img src={auralisLogo} width="84" height="84" alt=""/></div>
           </div>
         </div>
-        <div className="splash-title" aria-label={neutral ? "Zona de Juegos" : "Fortuna Real"}>
-          <span>{neutral ? "ZONA DE" : "FORTUNA"}</span> <strong>{neutral ? "JUEGOS" : "REAL"}</strong>
+        <div className="splash-title" aria-label={neutral ? "Zona de Juegos" : "Auralis Fortuna Real"}>
+          <span>{neutral ? "ZONA DE" : "AURALIS"}</span> <strong>{neutral ? "JUEGOS" : "Fortuna Real"}</strong>
         </div>
         <p>{neutral ? "Juega, comparte y celebra" : "Sorteos con emoción real"}</p>
         <div className="splash-loader"><i /></div>

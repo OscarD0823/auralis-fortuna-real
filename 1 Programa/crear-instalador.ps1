@@ -4,7 +4,8 @@ param(
     [switch]$Elevated,
     [switch]$Publish,
     [switch]$FullValidation,
-    [switch]$NoOpenFolder
+    [switch]$NoOpenFolder,
+    [string]$OutputDirectory = ""
 )
 
 $ErrorActionPreference = "Stop"
@@ -12,7 +13,11 @@ Add-Type -AssemblyName System.Security
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 $ProjectRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $RepositoryRoot = Split-Path -Parent $ProjectRoot
-$DeliveryRoot = Join-Path $RepositoryRoot "Entrega"
+$CustomDelivery = -not [string]::IsNullOrWhiteSpace($OutputDirectory)
+$DeliveryRoot = if ($CustomDelivery) { [IO.Path]::GetFullPath($OutputDirectory) } else { Join-Path $RepositoryRoot "Entrega" }
+if ($CustomDelivery -and (Test-Path -LiteralPath $DeliveryRoot) -and (Get-ChildItem -LiteralPath $DeliveryRoot -Force | Select-Object -First 1)) {
+    throw "La entrega alternativa debe ser una carpeta nueva o vacía; las entregas anteriores se conservan."
+}
 $ProgramOutput = Join-Path $DeliveryRoot "1 Programa"
 $InstallerOutput = Join-Path $DeliveryRoot "2 Instaladores"
 $LauncherOutput = Join-Path $DeliveryRoot "3 Ejecutar"
@@ -20,7 +25,7 @@ $LegacyInstallerOutput = Join-Path $ProjectRoot "instaladores"
 $SigningKeyPath = Join-Path $env:USERPROFILE ".tauri\fortuna-real.key"
 $SigningPasswordPath = "$SigningKeyPath.password.dpapi"
 $ReleaseRepository = "OscarD0823/Fortuna-Real"
-$BuildCache = Join-Path $ProjectRoot ".fortuna-cache"
+$BuildCache = if ($CustomDelivery) { Join-Path $DeliveryRoot ".build-cache" } else { Join-Path $ProjectRoot ".fortuna-cache" }
 $DependencyStampPath = Join-Path $BuildCache "package-lock.sha256"
 $ValidationStampPath = Join-Path $BuildCache "validation.sha256"
 
@@ -311,6 +316,8 @@ try {
         if ($FullValidation) {
             $arguments += " -FullValidation"
         }
+        if ($NoOpenFolder) { $arguments += " -NoOpenFolder" }
+        if ($CustomDelivery) { $arguments += " -OutputDirectory `"$DeliveryRoot`"" }
         $elevatedProcess = Start-Process `
             -FilePath "powershell.exe" `
             -ArgumentList $arguments `
@@ -686,7 +693,7 @@ Proyecto: https://github.com/OscarD0823/Fortuna-Real
         Where-Object { $_.Name -notin $keepInstallerNames } |
         Remove-Item -Recurse -Force
 
-    foreach ($legacyDeliveryName in @("Programa", "Instaladores", "Iniciador")) {
+    foreach ($legacyDeliveryName in $(if ($CustomDelivery) { @() } else { @("Programa", "Instaladores", "Iniciador") })) {
         $legacyDeliveryPath = Join-Path $DeliveryRoot $legacyDeliveryName
         if (Test-Path -LiteralPath $legacyDeliveryPath) {
             $legacyDeliveryFull = [IO.Path]::GetFullPath($legacyDeliveryPath).TrimEnd('\')
@@ -698,7 +705,7 @@ Proyecto: https://github.com/OscarD0823/Fortuna-Real
         }
     }
 
-    if (Test-Path -LiteralPath $LegacyInstallerOutput) {
+    if (-not $CustomDelivery -and (Test-Path -LiteralPath $LegacyInstallerOutput)) {
         $legacyFull = [IO.Path]::GetFullPath($LegacyInstallerOutput).TrimEnd('\')
         $projectFull = [IO.Path]::GetFullPath($ProjectRoot).TrimEnd('\')
         if ($legacyFull -ne "$projectFull\instaladores") {

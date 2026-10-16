@@ -519,8 +519,8 @@ class FortunaAudioEngine {
           : `Número ${result.landedNumber}`;
       const announcementText = result.kind === "winner"
         ? result.selectedParticipantName
-          ? `Resultado confirmado. ${result.selectedParticipantName} queda fuera de la ronda; y ${result.participantName} gana Fortuna Real. El premio es ${result.prize || "el premio del sorteo"}. ¡Felicitaciones!`
-          : `Atención, Fortuna Real tiene un resultado. ${contextLabel}: ${result.participantName} gana. El premio es ${result.prize || "el premio del sorteo"}. ¡Felicitaciones!`
+          ? `Resultado confirmado. ${result.selectedParticipantName} queda fuera de la ronda; y ${result.participantName} gana Auralis Fortuna Real. El premio es ${result.prize || "el premio del sorteo"}. ¡Felicitaciones!`
+          : `Atención, Auralis Fortuna Real tiene un resultado. ${contextLabel}: ${result.participantName} gana. El premio es ${result.prize || "el premio del sorteo"}. ¡Felicitaciones!`
         : `Resultado confirmado. ${contextLabel}: ${result.participantName} queda fuera de la ronda.`;
 
       if (result.kind === "winner") {

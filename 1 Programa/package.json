@@ -1,7 +1,7 @@
 {
   "name": "fortuna-real",
   "private": true,
-  "version": "1.0.13",
+  "version": "1.1.0",
   "type": "module",
   "scripts": {
     "historial:actualizar": "node ./scripts/version-history.mjs --write",
@@ -16,7 +16,7 @@
     "lint": "tsc --noEmit",
     "test": "npm run test:types && npm run test:persistence && npm run test:updater && npm run test:release-config && npm run test:capacity && npm run test:marble-seeds && npm run test:ducks && npm run test:fairness && npm run test:recovery && npm run test:audio && npm run test:screens && npm run test:accessibility && npm run test:tutorials",
     "test:types": "tsc --noEmit -p tsconfig.tests.json && node --experimental-strip-types ./scripts/beta-gameplay-check.ts",
-    "test:persistence": "node --experimental-strip-types ./scripts/persistence-check.ts && node --experimental-strip-types ./scripts/results-archive-check.ts",
+    "test:persistence": "node --experimental-strip-types ./scripts/persistence-check.ts && node --experimental-strip-types ./scripts/results-archive-check.ts && node --experimental-strip-types ./scripts/participant-draft-check.ts",
     "test:updater": "node --experimental-strip-types ./scripts/updater-check.ts",
     "test:release-config": "node --experimental-strip-types ./scripts/release-config-check.ts && node ./scripts/dependency-fingerprint.mjs --self-test && npm run test:history",
     "test:capacity": "node --experimental-strip-types ./scripts/capacity-check.ts",

@@ -29,7 +29,7 @@ const phaseCopy: Record<CardPhase, { title: string; detail: string }> = {
   },
   revealing: {
     title: "Carta seleccionada",
-    detail: "Fortuna Real está confirmando el resultado.",
+    detail: "Auralis Fortuna Real está confirmando el resultado.",
   },
 };
 

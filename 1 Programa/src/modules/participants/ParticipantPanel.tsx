@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import {readParticipantDraft,saveParticipantDraft} from './participantDraft';
 import {
   ClipboardPaste,
   ListChecks,
@@ -16,11 +17,12 @@ import {
 } from "./drawStore";
 
 export function ParticipantPanel() {
-  const [name, setName] = useState("");
-  const [bulkText, setBulkText] = useState("");
+  const [name, setName] = useState(()=>readParticipantDraft(localStorage).name);
+  const [bulkText, setBulkText] = useState(()=>readParticipantDraft(localStorage).bulkText);
   const [showBulk, setShowBulk] = useState(false);
   const [notice, setNotice] = useState("");
   const [query, setQuery] = useState("");
+  useEffect(()=>{try{saveParticipantDraft(localStorage,name,bulkText);}catch{setNotice('No se pudo guardar el borrador. Copia los nombres antes de cerrar.');}},[name,bulkText]);
   const participants = useDrawStore((state) => state.participants);
   const game = useDrawStore((state) => state.game);
   const addNames = useDrawStore((state) => state.addNames);

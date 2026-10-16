@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {readParticipantDraft,saveParticipantDraft} from '../src/modules/participants/participantDraft.ts';
+const values=new Map<string,string>();
+const storage={getItem:(k:string)=>values.get(k)??null,setItem:(k:string,v:string)=>{values.set(k,v);}};
+saveParticipantDraft(storage,'Ana','Ana\nPedro');
+assert.deepEqual(readParticipantDraft(storage),{name:'Ana',bulkText:'Ana\nPedro'});
+saveParticipantDraft(storage,'','');
+assert.deepEqual(readParticipantDraft(storage),{name:'',bulkText:''});
+values.set('fortuna-real-participant-draft-v1','invalid');
+assert.deepEqual(readParticipantDraft(storage),{name:'',bulkText:''});
+console.log('Participant drafts survive reopening without submitting or changing the draw.');
