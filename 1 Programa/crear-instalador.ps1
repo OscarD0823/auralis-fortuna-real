@@ -5,6 +5,7 @@ param(
     [switch]$Publish,
     [switch]$FullValidation,
     [switch]$NoOpenFolder,
+    [switch]$ResumeBundle,
     [string]$OutputDirectory = ""
 )
 
@@ -15,7 +16,7 @@ $ProjectRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $RepositoryRoot = Split-Path -Parent $ProjectRoot
 $CustomDelivery = -not [string]::IsNullOrWhiteSpace($OutputDirectory)
 $DeliveryRoot = if ($CustomDelivery) { [IO.Path]::GetFullPath($OutputDirectory) } else { Join-Path $RepositoryRoot "Entrega" }
-if ($CustomDelivery -and (Test-Path -LiteralPath $DeliveryRoot) -and (Get-ChildItem -LiteralPath $DeliveryRoot -Force | Select-Object -First 1)) {
+if ($CustomDelivery -and -not $ResumeBundle -and (Test-Path -LiteralPath $DeliveryRoot) -and (Get-ChildItem -LiteralPath $DeliveryRoot -Force | Select-Object -First 1)) {
     throw "La entrega alternativa debe ser una carpeta nueva o vacía; las entregas anteriores se conservan."
 }
 $ProgramOutput = Join-Path $DeliveryRoot "1 Programa"
@@ -28,6 +29,19 @@ $ReleaseRepository = "OscarD0823/auralis-fortuna-real"
 $BuildCache = if ($CustomDelivery) { Join-Path $DeliveryRoot ".build-cache" } else { Join-Path $ProjectRoot ".fortuna-cache" }
 $DependencyStampPath = Join-Path $BuildCache "package-lock.sha256"
 $ValidationStampPath = Join-Path $BuildCache "validation.sha256"
+if ($ResumeBundle) {
+    if (-not $CustomDelivery) { throw "Reanudar requiere indicar la entrega que quedó incompleta." }
+    $compiledProgram = Join-Path $ProjectRoot "src-tauri\target\release\fortuna-real.exe"
+    $expectedVersion = (Get-Content -Raw (Join-Path $ProjectRoot "src-tauri\tauri.conf.json") | ConvertFrom-Json).version
+    if (-not (Test-Path -LiteralPath $compiledProgram) -or (Get-Item -LiteralPath $compiledProgram).VersionInfo.ProductVersion -ne $expectedVersion) {
+        throw "No hay un ejecutable compilado para la versión actual; realiza una compilación completa."
+    }
+    if (Test-Path -LiteralPath $InstallerOutput) {
+        if (Get-ChildItem -LiteralPath $InstallerOutput -File | Select-Object -First 1) {
+            throw "La entrega ya contiene archivos de instalación; no se sobrescribirá."
+        }
+    }
+}
 
 function Write-Step {
     param([string]$Message)
@@ -461,7 +475,12 @@ try {
 
     Write-Step "Compilando Fortuna Real y creando el instalador..."
     $buildStartedAt = Get-Date
-    & npm.cmd run tauri build
+    if ($ResumeBundle) {
+        & npm.cmd run tauri bundle -- --verbose
+    }
+    else {
+        & npm.cmd run tauri build
+    }
     if ($LASTEXITCODE -ne 0) {
         throw "La compilacion del instalador fallo (codigo $LASTEXITCODE)."
     }
