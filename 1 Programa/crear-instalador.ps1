@@ -36,6 +36,11 @@ if ($ResumeBundle) {
     if (-not (Test-Path -LiteralPath $compiledProgram) -or (Get-Item -LiteralPath $compiledProgram).VersionInfo.ProductVersion -ne $expectedVersion) {
         throw "No hay un ejecutable compilado para la versión actual; realiza una compilación completa."
     }
+    $compiledAt = (Get-Item -LiteralPath $compiledProgram).LastWriteTimeUtc
+    $sourcePaths = @("src", "public", "src-tauri\src", "src-tauri\Cargo.toml", "src-tauri\Cargo.lock", "src-tauri\tauri.conf.json") | ForEach-Object { Join-Path $ProjectRoot $_ }
+    if (Get-ChildItem -LiteralPath $sourcePaths -File -Recurse | Where-Object { $_.LastWriteTimeUtc -gt $compiledAt } | Select-Object -First 1) {
+        throw "Las fuentes cambiaron después de compilar. Realiza una compilación completa para incluirlas."
+    }
     if (Test-Path -LiteralPath $InstallerOutput) {
         if (Get-ChildItem -LiteralPath $InstallerOutput -File | Select-Object -First 1) {
             throw "La entrega ya contiene archivos de instalación; no se sobrescribirá."
@@ -331,6 +336,7 @@ try {
             $arguments += " -FullValidation"
         }
         if ($NoOpenFolder) { $arguments += " -NoOpenFolder" }
+        if ($ResumeBundle) { $arguments += " -ResumeBundle" }
         if ($CustomDelivery) { $arguments += " -OutputDirectory `"$DeliveryRoot`"" }
         $elevatedProcess = Start-Process `
             -FilePath "powershell.exe" `
