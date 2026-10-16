@@ -41,9 +41,9 @@ export function SplashScreen({ onDone }: { onDone: () => void }) {
         </div>
         <p>{neutral ? "Juega, comparte y celebra" : "Sorteos con emoción real"}</p>
         <div className="splash-loader"><i /></div>
-        <a className="splash-watermark" href="https://github.com/OscarD0823/Fortuna-Real" target="_blank" rel="noreferrer">
+        <a className="splash-watermark" href="https://github.com/OscarD0823/auralis-fortuna-real" target="_blank" rel="noreferrer">
           Una creación de <strong>OscarD0823</strong>
-          <span>github.com/OscarD0823/Fortuna-Real</span>
+          <span>github.com/OscarD0823/auralis-fortuna-real</span>
         </a>
       </div>
       <button type="button" className="splash-skip" onClick={skip}>Saltar intro</button>

@@ -212,7 +212,7 @@ for (const marker of [
   assert.ok(installerUpgradeLauncher.includes(marker), `El iniciador no aplica: ${marker}.`);
 }
 for (const marker of [
-  '"OscarD0823/Fortuna-Real"',
+  '"OscarD0823/auralis-fortuna-real"',
   "git.exe clone",
   "--depth 1",
   '"1 Programa"',

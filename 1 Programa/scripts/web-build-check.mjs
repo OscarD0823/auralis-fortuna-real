@@ -3,7 +3,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { runInNewContext } from 'node:vm';
 
 const read = path => readFileSync(path, 'utf8');
-const base = '/Fortuna-Real/';
+const base = '/auralis-fortuna-real/';
 const origin = 'https://oscard0823.github.io';
 const manifest = JSON.parse(read('dist-web/manifest.webmanifest'));
 for (const field of ['id', 'scope', 'start_url']) assert.equal(manifest[field], './');
@@ -96,7 +96,7 @@ for (const path of [base, base + '?game=cards', base + 'index.html']) {
   assert.equal(await request(path, 'navigate'), `cached:${base}index.html`);
 }
 for (const path of precached) assert.equal(await request(path), `cached:${path}`);
-for (const path of ['/Caja-Fantasma/', base + 'api/room', 'https://github.com/OscarD0823/Fortuna-Real/releases/latest']) {
+for (const path of ['/auralis-caja-fantasma/', base + 'api/room', 'https://github.com/OscarD0823/auralis-fortuna-real/releases/latest']) {
   assert.equal(await request(path, 'navigate'), undefined, 'Do not capture other apps, rooms or downloads');
 }
 assert.equal(await request(base, 'navigate', 'POST'), undefined);

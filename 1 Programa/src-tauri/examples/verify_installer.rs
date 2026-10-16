@@ -33,7 +33,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         .and_then(|name| name.to_str())
         .ok_or("Nombre de instalador inválido.")?;
     let expected_url = format!(
-        "https://github.com/OscarD0823/Fortuna-Real/releases/download/v{version}/{filename}"
+        "https://github.com/OscarD0823/auralis-fortuna-real/releases/download/v{version}/{filename}"
     );
     if platform["url"].as_str() != Some(&expected_url) {
         return Err("latest.json no apunta al instalador y la etiqueta correctos.".into());

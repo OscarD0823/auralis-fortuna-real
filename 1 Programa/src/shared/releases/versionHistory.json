@@ -1,5 +1,21 @@
 [
   {
+    "version": "1.1.1",
+    "date": "2026-10-16",
+    "title": "El mismo programa, dentro de Auralis",
+    "notice": "Actualización BETA de la aplicación existente. Conserva sus datos y su corona original.",
+    "groups": [
+      {
+        "title": "Identidad y enlaces",
+        "items": [
+          "La corona y el emblema originales siguen identificando Fortuna Real.",
+          "Direcciones actualizadas al repositorio Auralis existente, conservando versiones e historial.",
+          "La instalación actualiza la misma aplicación y mantiene su identificador y firma."
+        ]
+      }
+    ]
+  },
+  {
     "version": "1.1.0",
     "date": "2026-10-16",
     "title": "Auralis y recuperación de borradores",
@@ -20,7 +36,7 @@
     "date": "2026-10-07",
     "title": "Web instalable, autor en la cabecera y retirada de Pinball",
     "notice": "Actualización para Windows y la web. Conserva la voz Daniela High en PC y los resultados locales. Las salas por Internet y Microsoft Store son propuestas documentadas, aún no disponibles.",
-    "source": "https://github.com/OscarD0823/Fortuna-Real/compare/v1.0.12...v1.0.13",
+    "source": "https://github.com/OscarD0823/auralis-fortuna-real/compare/v1.0.12...v1.0.13",
     "groups": [
       {
         "title": "Web oficial e instalación",
@@ -54,7 +70,7 @@
     "date": "2026-09-19",
     "title": "Autor visible e historial con clasificación completa",
     "notice": "Se conservan la voz Daniela High, los juegos y sus reglas. Los cambios de historial no alteran los resultados comprometidos. Canicas y Patos siguen en beta; Pinball continúa desactivado.",
-    "source": "https://github.com/OscarD0823/Fortuna-Real/compare/v1.0.11...v1.0.12",
+    "source": "https://github.com/OscarD0823/auralis-fortuna-real/compare/v1.0.11...v1.0.12",
     "groups": [
       {
         "title": "Creado por OscarD0823",
@@ -91,7 +107,7 @@
     "date": "2026-09-12",
     "title": "Actualización integrada, clima en carrera y Patos rápidos",
     "notice": "Canicas y Patos siguen en beta; Pinball continúa desactivado. La voz Daniela High no cambia. Las reglas de selección siguen siendo iguales para todos.",
-    "source": "https://github.com/OscarD0823/Fortuna-Real/compare/v1.0.10...v1.0.11",
+    "source": "https://github.com/OscarD0823/auralis-fortuna-real/compare/v1.0.10...v1.0.11",
     "groups": [
       {
         "title": "Actualización dentro del programa",
@@ -175,7 +191,7 @@
     "date": "2026-09-07",
     "title": "Daniela High fiable, resultados e inicio renovado",
     "notice": "Pinball queda temporalmente desactivado para jugar; sus resultados anteriores se conservan.",
-    "source": "https://github.com/OscarD0823/Fortuna-Real/compare/v1.0.8...v1.0.9",
+    "source": "https://github.com/OscarD0823/auralis-fortuna-real/compare/v1.0.8...v1.0.9",
     "groups": [
       {
         "title": "Voz",
@@ -213,7 +229,7 @@
     "date": "2026-09-03",
     "title": "Instalar, actualizar o reinstalar con opciones claras",
     "notice": "",
-    "source": "https://github.com/OscarD0823/Fortuna-Real/compare/v1.0.7...v1.0.8",
+    "source": "https://github.com/OscarD0823/auralis-fortuna-real/compare/v1.0.7...v1.0.8",
     "groups": [
       {
         "title": "Instalación y actualización",
@@ -231,7 +247,7 @@
     "date": "2026-09-03",
     "title": "Dificultad de canicas, eventos y actualización en el mismo lugar",
     "notice": "Pinball era jugable en esta versión; se desactiva después en 1.0.9.",
-    "source": "https://github.com/OscarD0823/Fortuna-Real/compare/v1.0.6...v1.0.7",
+    "source": "https://github.com/OscarD0823/auralis-fortuna-real/compare/v1.0.6...v1.0.7",
     "groups": [
       {
         "title": "Canicas",
@@ -264,7 +280,7 @@
     "date": "2026-09-02",
     "title": "Primera integración de Daniela High sin conexión",
     "notice": "Esta integración todavía podía recurrir a una voz de Windows si fallaba. La corrección que fija Daniela y normaliza las rutas llega en 1.0.9.",
-    "source": "https://github.com/OscarD0823/Fortuna-Real/compare/v1.0.5...v1.0.6",
+    "source": "https://github.com/OscarD0823/auralis-fortuna-real/compare/v1.0.5...v1.0.6",
     "groups": [
       {
         "title": "Audio",
@@ -289,7 +305,7 @@
     "date": "2026-08-31",
     "title": "Interfaz, cámaras y distribución desde GitHub",
     "notice": "",
-    "source": "https://github.com/OscarD0823/Fortuna-Real/compare/v1.0.4...v1.0.5",
+    "source": "https://github.com/OscarD0823/auralis-fortuna-real/compare/v1.0.4...v1.0.5",
     "groups": [
       {
         "title": "Programa",
@@ -313,7 +329,7 @@
     "date": "2026-08-29",
     "title": "Entrega ordenada y nuevos encuadres 3D",
     "notice": "",
-    "source": "https://github.com/OscarD0823/Fortuna-Real/compare/v1.0.3...v1.0.4",
+    "source": "https://github.com/OscarD0823/auralis-fortuna-real/compare/v1.0.3...v1.0.4",
     "groups": [
       {
         "title": "Juegos",
@@ -337,7 +353,7 @@
     "date": "2026-08-28",
     "title": "Patos por tandas e iniciador público",
     "notice": "",
-    "source": "https://github.com/OscarD0823/Fortuna-Real/releases/tag/v1.0.3",
+    "source": "https://github.com/OscarD0823/auralis-fortuna-real/releases/tag/v1.0.3",
     "groups": [
       {
         "title": "Patos",
@@ -361,7 +377,7 @@
     "date": "2026-08-27",
     "title": "Tutoriales interactivos y creador de instaladores",
     "notice": "Fecha y cambios recuperados del commit 316aeca; no se conserva un Release separado de esta versión.",
-    "source": "https://github.com/OscarD0823/Fortuna-Real/commit/316aeca",
+    "source": "https://github.com/OscarD0823/auralis-fortuna-real/commit/316aeca",
     "groups": [
       {
         "title": "Uso y juegos",
@@ -402,7 +418,7 @@
     "date": "2026-08-25",
     "title": "Base inicial de Fortuna Real",
     "notice": "Resumen acumulado hasta el commit 27aea67, que todavía declara 1.0.0. La fecha corresponde al código, no a una publicación independiente del instalador.",
-    "source": "https://github.com/OscarD0823/Fortuna-Real/commit/27aea67",
+    "source": "https://github.com/OscarD0823/auralis-fortuna-real/commit/27aea67",
     "groups": [
       {
         "title": "Funciones iniciales",

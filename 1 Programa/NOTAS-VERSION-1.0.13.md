@@ -25,4 +25,4 @@ Actualización para Windows y la web. Conserva la voz Daniela High en PC y los r
 - Guía para publicar la PWA en Microsoft Store y explicación de las diferencias frente al instalador firmado de escritorio.
 - Propuesta de salas por código, turnos de Ruleta y Cartas, nuevos juegos y mejoras de cámaras, pistas y Patos. No se habilita un servidor ni se cobran servicios.
 
-[Registro original de esta versión](https://github.com/OscarD0823/Fortuna-Real/compare/v1.0.12...v1.0.13).
+[Registro original de esta versión](https://github.com/OscarD0823/auralis-fortuna-real/compare/v1.0.12...v1.0.13).

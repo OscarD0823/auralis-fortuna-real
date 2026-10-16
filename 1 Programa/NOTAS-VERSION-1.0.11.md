@@ -30,4 +30,4 @@ Canicas y Patos siguen en beta; Pinball continúa desactivado. La voz Daniela Hi
 - Los árboles y el pasto ocultan por completo a los patos y bloquean disparos. El marcador queda fuera del campo y los poderes visuales no cambian quién gana.
 - Pruebas para 2–200 participantes, calendario de fenómenos, continuidad del movimiento, selección uniforme y compatibilidad con resultados anteriores.
 
-[Registro original de esta versión](https://github.com/OscarD0823/Fortuna-Real/compare/v1.0.10...v1.0.11).
+[Registro original de esta versión](https://github.com/OscarD0823/auralis-fortuna-real/compare/v1.0.10...v1.0.11).

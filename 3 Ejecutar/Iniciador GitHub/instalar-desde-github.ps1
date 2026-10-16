@@ -6,9 +6,9 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
-$Repository = "OscarD0823/Fortuna-Real"
-$ExpectedRemote = "https://github.com/OscarD0823/Fortuna-Real.git"
-$LatestManifestUrl = "https://github.com/OscarD0823/Fortuna-Real/releases/latest/download/latest.json"
+$Repository = "OscarD0823/auralis-fortuna-real"
+$ExpectedRemote = "https://github.com/OscarD0823/auralis-fortuna-real.git"
+$LatestManifestUrl = "https://github.com/OscarD0823/auralis-fortuna-real/releases/latest/download/latest.json"
 $ProgramFolderName = "1 Programa"
 $InstallerFolderName = "2 Instaladores"
 $LauncherFolderName = "3 Ejecutar"
@@ -57,7 +57,7 @@ try {
     Refresh-Path
 
     if ($CheckOnly) {
-        if ($Repository -ne "OscarD0823/Fortuna-Real" -or $ExpectedRemote -notmatch '^https://github\.com/OscarD0823/Fortuna-Real\.git$') {
+        if ($Repository -ne "OscarD0823/auralis-fortuna-real" -or $ExpectedRemote -notmatch '^https://github\.com/OscarD0823/auralis-fortuna-real\.git$') {
             throw "La direccion fija del proyecto no es valida."
         }
         if (@($ProgramFolderName, $InstallerFolderName, $LauncherFolderName) -join "|" -ne "1 Programa|2 Instaladores|3 Ejecutar") {

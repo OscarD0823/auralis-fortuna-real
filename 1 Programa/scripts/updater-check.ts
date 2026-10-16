@@ -195,7 +195,7 @@ assert.ok(!updaterSource.includes("getCurrentWindow().onCloseRequested"), "No in
 assert.equal(tauriConfig.bundle.createUpdaterArtifacts, true);
 assert.equal(tauriConfig.plugins.updater.windows.installMode, "quiet", "La actualización automática no debe abrir la UI de NSIS.");
 assert.equal(tauriConfig.bundle.windows.nsis.installMode, "currentUser", "No ampliar privilegios para actualizar silenciosamente.");
-assert.match(tauriConfig.plugins.updater.endpoints[0], /github\.com\/OscarD0823\/Fortuna-Real\/releases\/latest\/download\/latest\.json/u);
+assert.match(tauriConfig.plugins.updater.endpoints[0], /github\.com\/OscarD0823\/auralis-fortuna-real\/releases\/latest\/download\/latest\.json/u);
 
 console.log(JSON.stringify({
   checkOnEveryLaunch: true,

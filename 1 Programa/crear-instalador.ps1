@@ -24,7 +24,7 @@ $LauncherOutput = Join-Path $DeliveryRoot "3 Ejecutar"
 $LegacyInstallerOutput = Join-Path $ProjectRoot "instaladores"
 $SigningKeyPath = Join-Path $env:USERPROFILE ".tauri\fortuna-real.key"
 $SigningPasswordPath = "$SigningKeyPath.password.dpapi"
-$ReleaseRepository = "OscarD0823/Fortuna-Real"
+$ReleaseRepository = "OscarD0823/auralis-fortuna-real"
 $BuildCache = if ($CustomDelivery) { Join-Path $DeliveryRoot ".build-cache" } else { Join-Path $ProjectRoot ".fortuna-cache" }
 $DependencyStampPath = Join-Path $BuildCache "package-lock.sha256"
 $ValidationStampPath = Join-Path $BuildCache "validation.sha256"
@@ -585,7 +585,7 @@ Si Windows indica que falta WebView2 o el
 programa no abre, utiliza el instalador normal de la carpeta Instaladores; ese
 instalador incluye WebView2 sin conexión.
 
-Proyecto: https://github.com/OscarD0823/Fortuna-Real
+Proyecto: https://github.com/OscarD0823/auralis-fortuna-real
 Autor: OscarD0823
 "@ | Set-Content -LiteralPath (Join-Path $ProgramOutput "LEEME.txt") -Encoding utf8
     $starterStage = Join-Path $BuildCache "github-starter-stage"
@@ -670,7 +670,7 @@ FORTUNA REAL $version - EJECUTAR
 - Instalar Fortuna Real.cmd instala por primera vez o actualiza la copia existente.
 - Al instalar, Windows crea accesos fuera de la carpeta interna del programa.
 
-Proyecto: https://github.com/OscarD0823/Fortuna-Real
+Proyecto: https://github.com/OscarD0823/auralis-fortuna-real
 "@ | Set-Content -LiteralPath (Join-Path $LauncherOutput "LEEME.txt") -Encoding utf8
 
     # Solo después de verificar firma, manifiesto y ZIP se retiran entregas

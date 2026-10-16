@@ -14,5 +14,5 @@
   instalador estable y todas las dependencias en otra computadora.
 
 Para un usuario final se recomienda el instalador de
-[GitHub Releases](https://github.com/OscarD0823/Fortuna-Real/releases/latest),
+[GitHub Releases](https://github.com/OscarD0823/auralis-fortuna-real/releases/latest),
 no el modo de desarrollo.

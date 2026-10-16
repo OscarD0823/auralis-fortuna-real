@@ -28,4 +28,4 @@ Se conservan la voz Daniela High, los juegos y sus reglas. Los cambios de histor
 - La auditoría interna se conserva. Los registros parciales anteriores se apartan del historial visible sin destruir su copia local de recuperación.
 - Pruebas de persistencia y recuperación con los cinco motores, grupos de 2, 8 y 200 participantes, cancelaciones y las dos reglas de llegada de Canicas.
 
-[Registro original de esta versión](https://github.com/OscarD0823/Fortuna-Real/compare/v1.0.11...v1.0.12).
+[Registro original de esta versión](https://github.com/OscarD0823/auralis-fortuna-real/compare/v1.0.11...v1.0.12).

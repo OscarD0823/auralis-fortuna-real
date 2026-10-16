@@ -1,1 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc"><title id="title">Auralis Fortuna Real</title><desc id="desc">Aurora y luz. Identidad original Auralis: una nueva luz para tus ideas.</desc><defs><linearGradient id="tile" x2=".8" y2="1"><stop stop-color="#442C48"/><stop offset="1" stop-color="#101B30"/></linearGradient><linearGradient id="aurora" x1="0" y1="0" x2="1" y2=".6"><stop stop-color="#F8E3A5"/><stop offset=".52" stop-color="#F7A9BD"/><stop offset="1" stop-color="#F8E3A5"/></linearGradient><radialGradient id="glow" cx=".25" cy=".16" r=".9"><stop stop-color="#F8E3A5" stop-opacity=".27"/><stop offset="1" stop-color="#F7A9BD" stop-opacity="0"/></radialGradient><filter id="shade" x="-.3" y="-.3" width="1.6" height="1.6"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#06111D" flood-opacity=".5"/></filter><clipPath id="tile-clip"><rect width="1024" height="1024" rx="230"/></clipPath></defs><g clip-path="url(#tile-clip)"><rect width="1024" height="1024" rx="230" fill="url(#tile)"/><rect x="12" y="12" width="1000" height="1000" rx="220" fill="url(#glow)" stroke="#F8E3A5" stroke-opacity=".22" stroke-width="2"/><path d="M-40 363C150 34 420 345 644 192S982 84 1103 159" fill="none" stroke="url(#aurora)" stroke-width="120" opacity=".09"/><path d="M-39 292C178 72 363 337 597 186S960 110 1100 32" fill="none" stroke="url(#aurora)" stroke-width="30" opacity=".5"/><path d="M-15 322C177 111 391 375 630 220S962 147 1060 73" fill="none" stroke="#F8E3A5" stroke-width="3" opacity=".7"/><path d="M102 855Q512 761 922 855" fill="none" stroke="url(#aurora)" stroke-width="4" opacity=".4"/><g transform="translate(51 63) scale(.9)" fill="none" stroke="#F6FBFF" stroke-width="44" stroke-linecap="round" stroke-linejoin="round" filter="url(#shade)"><circle cx="512" cy="525" r="219"/><circle cx="512" cy="525" r="95"/><path d="M512 307v123M512 620v123M294 525h123M607 525h123M357 370l87 87M579 592l88 88M357 680l87-88M579 457l88-87M441 215h142l-71 89Z"/></g><circle cx="817" cy="816" r="22" fill="#F8E3A5"/><circle cx="817" cy="816" r="37" fill="none" stroke="#F8E3A5" stroke-opacity=".2" stroke-width="2"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <radialGradient id="background" cx="42%" cy="35%" r="72%">
+      <stop offset="0" stop-color="#16343d"/>
+      <stop offset="0.55" stop-color="#07161e"/>
+      <stop offset="1" stop-color="#010609"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff1a0"/>
+      <stop offset="0.28" stop-color="#f8c341"/>
+      <stop offset="0.6" stop-color="#b66b09"/>
+      <stop offset="1" stop-color="#ffe477"/>
+    </linearGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <circle cx="512" cy="512" r="486" fill="#02080d"/>
+  <circle cx="512" cy="512" r="454" fill="url(#background)" stroke="url(#gold)" stroke-width="36"/>
+  <circle cx="512" cy="512" r="386" fill="none" stroke="#08d9d8" stroke-width="13" stroke-dasharray="34 27" opacity="0.95" filter="url(#glow)"/>
+  <g stroke="#b97810" stroke-width="12" opacity="0.9">
+    <path d="M512 126V265"/><path d="M512 759V898"/>
+    <path d="M126 512H265"/><path d="M759 512H898"/>
+    <path d="M239 239L337 337"/><path d="M687 687L785 785"/>
+    <path d="M785 239L687 337"/><path d="M337 687L239 785"/>
+  </g>
+  <circle cx="512" cy="512" r="252" fill="#03090d" stroke="url(#gold)" stroke-width="28"/>
+  <circle cx="512" cy="512" r="207" fill="none" stroke="#0d454b" stroke-width="5"/>
+  <path d="M350 438L421 492L505 354L594 491L677 418L643 625H383L350 438Z"
+        fill="none" stroke="url(#gold)" stroke-width="34" stroke-linejoin="round"/>
+  <path d="M401 682H625" stroke="#f8c341" stroke-width="28" stroke-linecap="round"/>
+  <circle cx="350" cy="429" r="25" fill="#ffe477"/>
+  <circle cx="506" cy="343" r="25" fill="#ffe477"/>
+  <circle cx="683" cy="408" r="25" fill="#ffe477"/>
+</svg>

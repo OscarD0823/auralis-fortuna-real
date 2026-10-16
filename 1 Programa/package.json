@@ -1,7 +1,7 @@
 {
   "name": "fortuna-real",
   "private": true,
-  "version": "1.1.0",
+  "version": "1.1.1",
   "type": "module",
   "scripts": {
     "historial:actualizar": "node ./scripts/version-history.mjs --write",

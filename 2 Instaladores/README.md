@@ -1,7 +1,7 @@
 # Instaladores de Fortuna Real
 
 La versión estable más reciente se descarga desde
-[GitHub Releases](https://github.com/OscarD0823/Fortuna-Real/releases/latest).
+[GitHub Releases](https://github.com/OscarD0823/auralis-fortuna-real/releases/latest).
 
 Opción recomendada para Windows 10/11 x64:
 

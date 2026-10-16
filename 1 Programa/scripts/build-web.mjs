@@ -4,7 +4,7 @@ import { join, relative } from "node:path";
 import { createHash } from "node:crypto";
 
 // Web output must never replace the native installer's dist/.
-const base = "/Fortuna-Real/";
+const base = "/auralis-fortuna-real/";
 const result = spawnSync(process.execPath, ["node_modules/vite/bin/vite.js", "build"], {
   stdio: "inherit", env: { ...process.env, VITE_WEB_BASE: base, VITE_WEB_BUILD: "true" },
 });

@@ -1,4 +1,3 @@
-import auralisBrand from './assets/auralis-brand.png';
 import {
   useCallback,
   useEffect,
@@ -792,10 +791,11 @@ function Topbar({
       <div className="brand-and-credit">
       <div className="brand-lockup" aria-label={neutralMode ? "Zona de Juegos" : "Auralis Fortuna Real"}>
         <div className="brand-mark" aria-hidden="true">
-          <img src={auralisBrand} alt="" style={{width:48,height:48}} />
+          <span className="brand-mark__ring" />
+          <Crown size={23} strokeWidth={1.7} />
         </div>
         <div>
-          <div className="brand-name">{neutralMode ? <>ZONA DE <span>JUEGOS</span></> : <>AURALIS <span>Fortuna Real</span></>}</div>
+          <div className="brand-name">{neutralMode ? <>ZONA DE <span>JUEGOS</span></> : <>FORTUNA <span>REAL</span></>}</div>
           <div className="brand-tagline">{neutralMode ? "Juega, comparte y celebra" : "Sorteos con emoción real"}</div>
         </div>
       </div>

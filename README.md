@@ -8,9 +8,9 @@ Pinball está retirado definitivamente de los juegos disponibles. Sus resultados
 
 ## Web oficial: jugar, instalar o descargar Windows
 
-Abre **[Fortuna Real en la web](https://oscard0823.github.io/Fortuna-Real/)**.
+Abre **[Fortuna Real en la web](https://oscard0823.github.io/auralis-fortuna-real/)**.
 Puedes jugar allí, pulsar **Instalar web** en un navegador compatible o elegir
-**Descargar para PC** para ir al [instalador estable](https://github.com/OscarD0823/Fortuna-Real/releases/latest).
+**Descargar para PC** para ir al [instalador estable](https://github.com/OscarD0823/auralis-fortuna-real/releases/latest).
 No son la misma instalación: la web no incluye Daniela High y no comparte el historial con Windows.
 
 La versión **1.0.13** se distribuye para Windows y la web. En el programa de PC,
@@ -22,7 +22,7 @@ La web usa GitHub Pages sin dominio de pago. Después de descargar todos los rec
 puede funcionar sin conexión mientras el navegador conserve su caché. Para aplicar una
 actualización preparada, termina las partidas, cierra todas las ventanas y vuelve a abrir.
 No borres los datos del navegador si quieres conservar el historial; exporta primero tus resultados.
-Consulta [Privacidad](https://oscard0823.github.io/Fortuna-Real/privacidad.html).
+Consulta [Privacidad](https://oscard0823.github.io/auralis-fortuna-real/privacidad.html).
 
 Las salas por código **todavía no están implementadas**. Consulta el
 [plan de interacción y mejoras](1%20Programa/docs/SALAS-Y-JUEGOS.md) y la
@@ -71,7 +71,7 @@ Después de ejecutar el creador, la carpeta local `Entrega` contiene la versión
 para compartir con la misma división: `1 Programa`, `2 Instaladores` y
 `3 Ejecutar`. `Entrega` no se sube al historial de Git porque contiene binarios
 grandes; los instaladores oficiales se publican en
-[GitHub Releases](https://github.com/OscarD0823/Fortuna-Real/releases/latest).
+[GitHub Releases](https://github.com/OscarD0823/auralis-fortuna-real/releases/latest).
 
 El instalador normal es la opción recomendada. Configura Fortuna Real, crea los accesos de Windows e instala
 WebView2 silenciosamente si el equipo no lo tiene, con el paquete sin conexión
@@ -98,7 +98,7 @@ los datos locales.
 
 El iniciador de respaldo de `3 Ejecutar/Iniciador GitHub` nunca contiene
 credenciales ni exige iniciar sesión.
-Descarga el repositorio público `OscarD0823/Fortuna-Real`, permite elegir la
+Descarga el repositorio público `OscarD0823/auralis-fortuna-real`, permite elegir la
 carpeta de destino e instala las dependencias declaradas. La descarga queda
 organizada igualmente en `1 Programa`, `2 Instaladores` y `3 Ejecutar`.
 
@@ -267,7 +267,7 @@ compilado con esta configuración. La demostración local
 `marbles-preview.html?game=updater` solo muestra estados y no instala archivos.
 
 Las actualizaciones se publican en GitHub Releases del repositorio
-`OscarD0823/Fortuna-Real`. La clave privada de firma y la contraseña protegida
+`OscarD0823/auralis-fortuna-real`. La clave privada de firma y la contraseña protegida
 se conservan únicamente en el perfil local de Windows, fuera del proyecto.
 
 La contraseña local se recupera cifrada con DPAPI y solo desde la cuenta de
@@ -318,13 +318,25 @@ salga de él.
 <!-- VERSION-HISTORY:START -->
 ## Historial de cambios
 
-Versión actual del código: **1.1.0**. También disponible desde **Novedades** dentro del programa, sin conexión.
+Versión actual del código: **1.1.1**. También disponible desde **Novedades** dentro del programa, sin conexión.
 
 Los cambios se resumen por función; los enlaces llevan al registro original. Las fechas de Releases usan el día de publicación en Colombia. Las versiones sin un Release conservado lo indican expresamente.
 
-### 1.0.13 → 1.1.0 — Auralis y recuperación de borradores
+### 1.1.0 → 1.1.1 — El mismo programa, dentro de Auralis
 
 Fecha: 2026-10-16. Versión actual del código.
+
+Actualización BETA de la aplicación existente. Conserva sus datos y su corona original.
+
+#### Identidad y enlaces
+
+- La corona y el emblema originales siguen identificando Fortuna Real.
+- Direcciones actualizadas al repositorio Auralis existente, conservando versiones e historial.
+- La instalación actualiza la misma aplicación y mantiene su identificador y firma.
+
+### 1.0.13 → 1.1.0 — Auralis y recuperación de borradores
+
+Fecha: 2026-10-16.
 
 Versión BETA. Conserva participantes, resultados, compromisos de las rondas y almacenamiento anterior.
 
@@ -359,7 +371,7 @@ Actualización para Windows y la web. Conserva la voz Daniela High en PC y los r
 - Guía para publicar la PWA en Microsoft Store y explicación de las diferencias frente al instalador firmado de escritorio.
 - Propuesta de salas por código, turnos de Ruleta y Cartas, nuevos juegos y mejoras de cámaras, pistas y Patos. No se habilita un servidor ni se cobran servicios.
 
-[Registro original de esta versión](https://github.com/OscarD0823/Fortuna-Real/compare/v1.0.12...v1.0.13).
+[Registro original de esta versión](https://github.com/OscarD0823/auralis-fortuna-real/compare/v1.0.12...v1.0.13).
 
 ### 1.0.11 → 1.0.12 — Autor visible e historial con clasificación completa
 
@@ -389,7 +401,7 @@ Se conservan la voz Daniela High, los juegos y sus reglas. Los cambios de histor
 - La auditoría interna se conserva. Los registros parciales anteriores se apartan del historial visible sin destruir su copia local de recuperación.
 - Pruebas de persistencia y recuperación con los cinco motores, grupos de 2, 8 y 200 participantes, cancelaciones y las dos reglas de llegada de Canicas.
 
-[Registro original de esta versión](https://github.com/OscarD0823/Fortuna-Real/compare/v1.0.11...v1.0.12).
+[Registro original de esta versión](https://github.com/OscarD0823/auralis-fortuna-real/compare/v1.0.11...v1.0.12).
 
 ### 1.0.10 → 1.0.11 — Actualización integrada, clima en carrera y Patos rápidos
 
@@ -421,7 +433,7 @@ Canicas y Patos siguen en beta; Pinball continúa desactivado. La voz Daniela Hi
 - Los árboles y el pasto ocultan por completo a los patos y bloquean disparos. El marcador queda fuera del campo y los poderes visuales no cambian quién gana.
 - Pruebas para 2–200 participantes, calendario de fenómenos, continuidad del movimiento, selección uniforme y compatibilidad con resultados anteriores.
 
-[Registro original de esta versión](https://github.com/OscarD0823/Fortuna-Real/compare/v1.0.10...v1.0.11).
+[Registro original de esta versión](https://github.com/OscarD0823/auralis-fortuna-real/compare/v1.0.10...v1.0.11).
 
 ### 1.0.9 → 1.0.10 — Nuevos circuitos de canicas e historial de versiones
 
@@ -486,7 +498,7 @@ Pinball queda temporalmente desactivado para jugar; sus resultados anteriores se
 - Edición portátil con resources/tts, modelo, diccionarios y licencias; comprobación SHA-256 de todos los archivos copiados.
 - Verificación de archivos mediante .NET para evitar fallos de carga de módulos de PowerShell, y tolerancia a la propagación del manifiesto de GitHub.
 
-[Registro original de esta versión](https://github.com/OscarD0823/Fortuna-Real/compare/v1.0.8...v1.0.9).
+[Registro original de esta versión](https://github.com/OscarD0823/auralis-fortuna-real/compare/v1.0.8...v1.0.9).
 
 ### 1.0.7 → 1.0.8 — Instalar, actualizar o reinstalar con opciones claras
 
@@ -499,7 +511,7 @@ Fecha: 2026-09-03.
 - Reintentos para comprobar el manifiesto remoto después de publicar, evitando declarar un error inmediatamente mientras GitHub propaga la versión.
 - Pruebas y documentación actualizadas para las opciones del instalador.
 
-[Registro original de esta versión](https://github.com/OscarD0823/Fortuna-Real/compare/v1.0.7...v1.0.8).
+[Registro original de esta versión](https://github.com/OscarD0823/auralis-fortuna-real/compare/v1.0.7...v1.0.8).
 
 ### 1.0.6 → 1.0.7 — Dificultad de canicas, eventos y actualización en el mismo lugar
 
@@ -525,7 +537,7 @@ Pinball era jugable en esta versión; se desactiva después en 1.0.9.
 - Actualización de la descarga alternativa desde GitHub para obtener los recursos de voz mediante Git LFS.
 - GitHub Actions descarga el modelo de voz y se refuerzan las comprobaciones de manifiestos de publicación.
 
-[Registro original de esta versión](https://github.com/OscarD0823/Fortuna-Real/compare/v1.0.6...v1.0.7).
+[Registro original de esta versión](https://github.com/OscarD0823/auralis-fortuna-real/compare/v1.0.6...v1.0.7).
 
 ### 1.0.5 → 1.0.6 — Primera integración de Daniela High sin conexión
 
@@ -545,7 +557,7 @@ Esta integración todavía podía recurrir a una voz de Windows si fallaba. La c
 - El programa puede iniciar sin conexión; las actualizaciones esperan a que no haya una partida, guía o demo activa.
 - Pruebas del flujo de descarga e instalación y almacenamiento del modelo grande con Git LFS.
 
-[Registro original de esta versión](https://github.com/OscarD0823/Fortuna-Real/compare/v1.0.5...v1.0.6).
+[Registro original de esta versión](https://github.com/OscarD0823/auralis-fortuna-real/compare/v1.0.5...v1.0.6).
 
 ### 1.0.4 → 1.0.5 — Interfaz, cámaras y distribución desde GitHub
 
@@ -562,7 +574,7 @@ Fecha: 2026-08-31.
 - Corrección de la publicación de un Release nuevo cuando todavía no existe en GitHub.
 - Actualización del flujo de GitHub Actions y sus referencias, manteniendo la firma del instalador en el computador local.
 
-[Registro original de esta versión](https://github.com/OscarD0823/Fortuna-Real/compare/v1.0.4...v1.0.5).
+[Registro original de esta versión](https://github.com/OscarD0823/auralis-fortuna-real/compare/v1.0.4...v1.0.5).
 
 ### 1.0.3 → 1.0.4 — Entrega ordenada y nuevos encuadres 3D
 
@@ -579,7 +591,7 @@ Fecha: 2026-08-29.
 - Entrega organizada en carpetas de programa, instaladores y ejecución; acceso directo fuera de la carpeta interna de la instalación.
 - Iniciador público de respaldo, instalador firmado con WebView2 sin conexión y ZIP del instalador.
 
-[Registro original de esta versión](https://github.com/OscarD0823/Fortuna-Real/compare/v1.0.3...v1.0.4).
+[Registro original de esta versión](https://github.com/OscarD0823/auralis-fortuna-real/compare/v1.0.3...v1.0.4).
 
 ### 1.0.2 → 1.0.3 — Patos por tandas e iniciador público
 
@@ -596,7 +608,7 @@ Fecha: 2026-08-28.
 - Instalador firmado con WebView2 sin conexión, entrega separada por funciones y ZIP de respaldo.
 - Iniciador para descargar desde el repositorio público, elegir destino y preparar dependencias sin iniciar sesión en GitHub; se debe conservar el CMD junto al PS1.
 
-[Registro original de esta versión](https://github.com/OscarD0823/Fortuna-Real/releases/tag/v1.0.3).
+[Registro original de esta versión](https://github.com/OscarD0823/auralis-fortuna-real/releases/tag/v1.0.3).
 
 ### 1.0.1 → 1.0.2 — Tutoriales interactivos y creador de instaladores
 
@@ -617,7 +629,7 @@ Fecha y cambios recuperados del commit 316aeca; no se conserva un Release separa
 - Verificador criptográfico del instalador y manifiesto; WebView2 sin conexión e instrucciones de entrega.
 - Pruebas ampliadas de tutoriales, audio, accesibilidad, capacidad y semillas de Canicas.
 
-[Registro original de esta versión](https://github.com/OscarD0823/Fortuna-Real/commit/316aeca).
+[Registro original de esta versión](https://github.com/OscarD0823/auralis-fortuna-real/commit/316aeca).
 
 ### 1.0.0 → 1.0.1 — Versión intermedia sin notas independientes conservadas
 
@@ -643,6 +655,6 @@ Resumen acumulado hasta el commit 27aea67, que todavía declara 1.0.0. La fecha 
 - Pistas procedurales, zonas temáticas y poderes en Canicas; cámaras, bosque y comportamiento adaptativo de Patos.
 - Mejoras de rendimiento, controles de audio, funcionamiento de escritorio con Tauri y base del actualizador.
 
-[Registro original de esta versión](https://github.com/OscarD0823/Fortuna-Real/commit/27aea67).
+[Registro original de esta versión](https://github.com/OscarD0823/auralis-fortuna-real/commit/27aea67).
 
 <!-- VERSION-HISTORY:END -->

@@ -25,7 +25,7 @@ for (const [index, entry] of history.entries()) {
     const source = new URL(entry.source);
     assert.equal(source.protocol, "https:");
     assert.equal(source.hostname, "github.com");
-    assert.ok(source.pathname.startsWith("/OscarD0823/Fortuna-Real/"));
+    assert.ok(source.pathname.startsWith("/OscarD0823/auralis-fortuna-real/"));
   }
   assert.ok(entry.groups.length > 0);
   for (const group of entry.groups) {
