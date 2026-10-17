@@ -1,5 +1,21 @@
 [
   {
+    "version": "1.1.2",
+    "date": "2026-10-16",
+    "title": "Animación de inicio reparada",
+    "notice": "Actualización de la misma aplicación. Conserva participantes y resultados.",
+    "groups": [
+      {
+        "title": "Inicio y pantallas pequeñas",
+        "items": [
+          "La corona vuelve a encajar en el centro de la ruleta animada.",
+          "La introducción termina una sola vez aunque la interfaz se actualice durante el arranque.",
+          "Título y créditos se ajustan a pantallas estrechas y se conserva la opción de saltar la introducción."
+        ]
+      }
+    ]
+  },
+  {
     "version": "1.1.1",
     "date": "2026-10-16",
     "title": "El mismo programa, dentro de Auralis",

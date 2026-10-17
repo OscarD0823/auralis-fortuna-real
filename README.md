@@ -318,13 +318,25 @@ salga de él.
 <!-- VERSION-HISTORY:START -->
 ## Historial de cambios
 
-Versión actual del código: **1.1.1**. También disponible desde **Novedades** dentro del programa, sin conexión.
+Versión actual del código: **1.1.2**. También disponible desde **Novedades** dentro del programa, sin conexión.
 
 Los cambios se resumen por función; los enlaces llevan al registro original. Las fechas de Releases usan el día de publicación en Colombia. Las versiones sin un Release conservado lo indican expresamente.
 
-### 1.1.0 → 1.1.1 — El mismo programa, dentro de Auralis
+### 1.1.1 → 1.1.2 — Animación de inicio reparada
 
 Fecha: 2026-10-16. Versión actual del código.
+
+Actualización de la misma aplicación. Conserva participantes y resultados.
+
+#### Inicio y pantallas pequeñas
+
+- La corona vuelve a encajar en el centro de la ruleta animada.
+- La introducción termina una sola vez aunque la interfaz se actualice durante el arranque.
+- Título y créditos se ajustan a pantallas estrechas y se conserva la opción de saltar la introducción.
+
+### 1.1.0 → 1.1.1 — El mismo programa, dentro de Auralis
+
+Fecha: 2026-10-16.
 
 Actualización BETA de la aplicación existente. Conserva sus datos y su corona original.
 

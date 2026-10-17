@@ -1,23 +1,38 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import auralisLogo from '../../assets/auralis-brand.png';
 import { useNeutralAppearance } from "../appearance";
 
 export function SplashScreen({ onDone }: { onDone: () => void }) {
   const neutral = useNeutralAppearance();
   const [leaving, setLeaving] = useState(false);
+  const done = useRef(onDone);
+  done.current = onDone;
+  const finish = useRef<() => void>(() => {});
 
   useEffect(() => {
-    const leaveTimer = window.setTimeout(() => setLeaving(true), 2700);
-    const doneTimer = window.setTimeout(onDone, 3350);
+    let finished = false;
+    let doneTimer: number;
+    const complete = () => {
+      if (finished) return;
+      finished = true;
+      done.current();
+    };
+    const leave = () => {
+      setLeaving(true);
+      window.clearTimeout(doneTimer);
+      doneTimer = window.setTimeout(complete, 520);
+    };
+    finish.current = leave;
+    const leaveTimer = window.setTimeout(leave, 2700);
+    doneTimer = window.setTimeout(complete, 3350);
     return () => {
       window.clearTimeout(leaveTimer);
       window.clearTimeout(doneTimer);
     };
-  }, [onDone]);
+  }, []);
 
   const skip = () => {
-    setLeaving(true);
-    window.setTimeout(onDone, 520);
+    finish.current();
   };
 
   return (
@@ -33,7 +48,7 @@ export function SplashScreen({ onDone }: { onDone: () => void }) {
             {Array.from({ length: 12 }, (_, index) => (
               <span key={index} style={{ transform: `rotate(${index * 30}deg)` }} />
             ))}
-            <div><img src={auralisLogo} width="84" height="84" alt=""/></div>
+            <div><img src={auralisLogo} width="84" height="84" alt="" decoding="async"/></div>
           </div>
         </div>
         <div className="splash-title" aria-label={neutral ? "Zona de Juegos" : "Auralis Fortuna Real"}>
